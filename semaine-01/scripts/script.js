@@ -3,14 +3,10 @@
 // ==============================
 const greetingElement = document.createElement("div");
 greetingElement.classList.add("greeting");
-greetingElement.style.textAlign = "center";
-greetingElement.style.padding = "10px";
-greetingElement.style.fontWeight = "bold";
-greetingElement.style.color = "#8b0000";
 document.body.prepend(greetingElement);
 
 function getGreetingMessage() {
-  const timezoneOffset = 2;
+  const timezoneOffset = 2; // Fuseau horaire de Kinshasa (UTC+2)
   const now = new Date();
   const utcHour = now.getUTCHours();
   const hour = (utcHour + timezoneOffset + 24) % 24;
@@ -48,11 +44,12 @@ function typeEffect() {
     }, delayBetweenTexts);
   }
 }
+
 heroH2.textContent = "";
 typeEffect();
 
 // ==============================
-// 3️⃣ Mode sombre / clair
+// 3️⃣ Bouton Mode sombre / clair
 // ==============================
 const modeButton = document.createElement("button");
 modeButton.id = "mode-toggle";
@@ -67,7 +64,7 @@ modeButton.addEventListener("click", () => {
 });
 
 // ==============================
-// 4️⃣ Changement automatique du lien actif
+// 4️⃣ Mise à jour automatique du lien actif
 // ==============================
 const navLinks = document.querySelectorAll("nav ul li a");
 window.addEventListener("scroll", () => {
