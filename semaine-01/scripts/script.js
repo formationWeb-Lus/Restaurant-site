@@ -1,6 +1,4 @@
-// ==============================
-// 1️⃣ Message d’accueil selon l’heure (Kinshasa UTC+2)
-// ==============================
+
 const greetingElement = document.createElement("div");
 greetingElement.classList.add("greeting");
 document.body.prepend(greetingElement);
