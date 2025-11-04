@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -283,3 +284,77 @@ footer {
   <p style="text-align:center;">Vous venez d’apprendre à styliser une page web complète étape par étape !</p>
 </body>
 </html>
+=======
+<!doctype html>
+
+
+const textToType = [
+'Découvrez nos plats raffinés...',
+'Savourez une expérience unique...',
+'Bienvenue au Restaurant Le Gourmet !'
+];
+
+
+let textIndex = 0;
+let charIndex = 0;
+const typingSpeed = 100;
+const delayBetweenTexts = 2000;
+
+
+function typeEffect() {
+if (charIndex < textToType[textIndex].length) {
+heroH2.textContent += textToType[textIndex].charAt(charIndex);
+charIndex++;
+setTimeout(typeEffect, typingSpeed);
+} else {
+setTimeout(() => {
+heroH2.textContent = '';
+charIndex = 0;
+textIndex = (textIndex + 1) % textToType.length;
+typeEffect();
+}, delayBetweenTexts);
+}
+}
+
+
+// Démarrage de l'animation
+typeEffect();
+
+
+// ============================================
+// 4) Bouton mode sombre / clair
+// ============================================
+
+
+const modeButton = document.createElement('button');
+modeButton.id = 'mode-toggle';
+modeButton.textContent = '🌙 Mode Sombre';
+document.body.appendChild(modeButton);
+
+
+modeButton.addEventListener('click', () => {
+document.body.classList.toggle('dark-mode');
+modeButton.textContent = document.body.classList.contains('dark-mode')
+? '☀️ Mode Clair'
+: '🌙 Mode Sombre';
+});
+
+
+// ============================================
+// FIN - conseils pédagogiques (à lire par l'enseignant)
+// ============================================
+
+
+/*
+Points d'évaluation :
+- L'étudiant a supprimé le fichier CSS externe ? (oui/non)
+- Le CSS a-t-il été placé dans une variable de type string (backticks) ?
+- L'application fonctionne-t-elle sans erreurs JS ? (ouvrir la console)
+- Le texte animé s'affiche-t-il correctement ?
+*/
+
+
+</script>
+</body>
+</html>
+>>>>>>> cf2949f33d679e426f57ba8d8eecffb9bedfb6f1
