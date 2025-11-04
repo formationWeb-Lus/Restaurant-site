@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cours CSS – Restaurant Le Gourmet</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #faf7f2;
+      margin: 0;
+      padding: 30px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #8b0000;
+      text-align: center;
+    }
+
+    h2 {
+      border-bottom: 2px solid #f4b400;
+      display: inline-block;
+      margin-top: 50px;
+    }
+
+    pre {
+      background-color: #1e1e1e;
+      color: #f4f4f4;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+    }
+
+    .explication {
+      background-color: #fff;
+      border-left: 5px solid #8b0000;
+      padding: 15px 20px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>💡 Cours CSS – Explication complète du style du site “Le Gourmet”</h1>
+
+  <!-- 🌈 STYLE GLOBAL -->
+  <div class="section">
+    <h2>1. 🌈 STYLE GLOBAL</h2>
+    <pre>
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #faf7f2;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+    </pre>
+    <div class="explication">
+      Ce code définit le style de base du site :  
+      <ul>
+        <li><b>font-family:</b> définit la police principale (ici <i>Poppins</i>).</li>
+        <li><b>color:</b> change la couleur du texte par défaut (gris foncé).</li>
+        <li><b>background-color:</b> met un fond beige clair sur toute la page.</li>
+        <li><b>line-height:</b> espace vertical entre les lignes de texte.</li>
+        <li><b>margin</b> et <b>padding:</b> enlèvent les espaces par défaut du navigateur.</li>
+        <li><b>overflow-x: hidden:</b> empêche la page de défiler horizontalement.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="section">
+    <h2>2. 🧭 HEADER (En-tête du site)</h2>
+    <pre>
+header {
+  background-color: #8b0000;
+  color: #fff;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+    </pre>
+    <div class="explication">
+      Cette partie stylise le haut du site (logo + menu) :  
+      <ul>
+        <li><b>background-color:</b> fond rouge foncé.</li>
+        <li><b>display: flex;</b> aligne le logo et le menu horizontalement.</li>
+        <li><b>justify-content:</b> espace entre le logo et la navigation.</li>
+        <li><b>position: sticky:</b> garde le header visible en haut quand on défile.</li>
+        <li><b>box-shadow:</b> ajoute une ombre pour donner de la profondeur.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LOGO -->
+  <div class="section">
+    <h2>3. 🖼️ LOGO</h2>
+    <pre>
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #f4b400;
+}
+
+.logo h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+    </pre>
+    <div class="explication">
+      <ul>
+        <li>Le logo et le texte sont alignés sur une ligne grâce à <b>display: flex</b>.</li>
+        <li><b>gap: 10px</b> ajoute un espace entre l’image et le texte.</li>
+        <li><b>border-radius: 50%</b> rend le logo circulaire.</li>
+        <li><b>border:</b> ajoute une bordure dorée autour du logo.</li>
+        <li>Le nom “Le Gourmet” est agrandi et mis en gras.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="section">
+    <h2>4. 🧭 MENU DE NAVIGATION</h2>
+    <pre>
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f4b400;
+}
+    </pre>
+    <div class="explication">
+      <ul>
+        <li><b>display: flex:</b> met les liens du menu côte à côte.</li>
+        <li><b>list-style: none:</b> supprime les puces de la liste.</li>
+        <li><b>transition:</b> rend le changement de couleur fluide au survol.</li>
+        <li><b>:hover:</b> change la couleur du lien en doré quand on passe la souris.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="section">
+    <h2>5. 🌆 SECTION HERO</h2>
+    <pre>
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    </pre>
+    <div class="explication">
+      Cette section est la grande bannière avec l’image d’arrière-plan :  
+      <ul>
+        <li><b>position: relative:</b> permet de placer l’image à l’intérieur en position absolue.</li>
+        <li><b>height: 90vh:</b> prend 90 % de la hauteur de l’écran.</li>
+        <li><b>justify-content / align-items:</b> centre le texte au milieu.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PRÉSENTATION -->
+  <div class="section">
+    <h2>6. 📄 SECTION PRÉSENTATION</h2>
+    <pre>
+.presentation {
+  background-color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+    </pre>
+    <div class="explication">
+      <ul>
+        <li><b>background-color:</b> fond blanc.</li>
+        <li><b>text-align: center:</b> tout le contenu est centré.</li>
+        <li><b>padding:</b> ajoute de grands espaces internes pour aérer.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="section">
+    <h2>7. ⚙️ PIED DE PAGE (FOOTER)</h2>
+    <pre>
+footer {
+  background-color: #8b0000;
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  border-top: 2px solid #f4b400;
+}
+    </pre>
+    <div class="explication">
+      Le bas du site reprend les couleurs du header :  
+      <ul>
+        <li>Fond rouge foncé et texte blanc.</li>
+        <li><b>border-top:</b> ligne dorée séparant le contenu du reste du site.</li>
+        <li><b>text-align:</b> centre le texte dans le pied de page.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MODE SOMBRE -->
+  <div class="section">
+    <h2>8. 🌙 MODE SOMBRE</h2>
+    <pre>
+.dark-mode {
+  background-color: #2b2b2b;
+  color: #e6e6e6;
+}
+    </pre>
+    <div class="explication">
+      Cette partie définit les couleurs pour un thème sombre :  
+      fond gris très foncé et texte gris clair.  
+      (Cette option ne fonctionne que si un script ajoute la classe <b>.dark-mode</b> au body.)
+    </div>
+  </div>
+
+  <!-- BOUTON MODE -->
+  <div class="section">
+    <h2>9. 🔘 BOUTON DE MODE SOMBRE</h2>
+    <pre>
+#mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #f4b400;
+  color: #8b0000;
+}
+    </pre>
+    <div class="explication">
+      <ul>
+        <li><b>position: fixed:</b> le bouton reste visible même quand on défile.</li>
+        <li><b>bottom/right:</b> placé en bas à droite de l’écran.</li>
+        <li><b>border-radius:</b> arrondit les coins du bouton.</li>
+        <li><b>background-color:</b> doré, avec texte rouge foncé pour contraster.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>🎓 Fin du cours</h2>
+  <p style="text-align:center;">Vous venez d’apprendre à styliser une page web complète étape par étape !</p>
+</body>
+</html>

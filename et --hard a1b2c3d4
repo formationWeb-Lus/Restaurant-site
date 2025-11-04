@@ -1,0 +1,42 @@
+[33mcommit cf2949f33d679e426f57ba8d8eecffb9bedfb6f1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: bongo-pro <aimeembongosina@gmail.com>
+Date:   Mon Oct 20 21:37:58 2025 -0700
+
+    j
+
+[33mcommit 33558e74a0a575e928aadb3ce0da2f9cb5760774[m
+Author: bongo-pro <aimeembongosina@gmail.com>
+Date:   Fri Oct 10 10:18:24 2025 -0700
+
+    je modifie css en l'ajoutant dans le fichier js
+
+[33mcommit f614a3b0968086b2e121732ae9b7667a133629ce[m
+Author: bongo-pro <aimeembongosina@gmail.com>
+Date:   Fri Oct 10 09:34:04 2025 -0700
+
+    add
+
+[33mcommit 85ebe4b0313ae81d4588be515e39db0eac148650[m
+Author: bongo-pro <aimeembongosina@gmail.com>
+Date:   Fri Oct 10 09:27:55 2025 -0700
+
+    add
+
+[33mcommit 000558f8555201cc7aae67b7ceea95f9acee21d8[m
+Merge: ab20717 f9aaa06
+Author: alexandre lusa <jiresselusa@gmail.com>
+Date:   Sat Oct 4 06:48:06 2025 -0700
+
+    Résolution du merge avec le README distant
+
+[33mcommit ab20717e35b372b6327300434004b55e532df3a6[m
+Author: alexandre lusa <jiresselusa@gmail.com>
+Date:   Sat Oct 4 06:37:20 2025 -0700
+
+    Initial commit: structure du projet restaurant-site
+
+[33mcommit f9aaa068337a566128c681a2047c79aa4de702da[m
+Author: alexandre lusa <jiresselusa127@gmail.com>
+Date:   Sat Oct 4 06:12:35 2025 -0700
+
+    Initial commit
