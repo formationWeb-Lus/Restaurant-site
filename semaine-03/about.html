@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction au CSS – Cours pour Débutants</title>
+  <style>
+    /* ==============================
+       🌈 STYLE DE LA PAGE PÉDAGOGIQUE
+    ============================== */
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #005f73;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #005f73;
+      margin-bottom: 10px;
+    }
+
+    code {
+      background-color: #e9ecef;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-family: "Courier New", monospace;
+      color: #d6336c;
+    }
+
+    pre {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-left: 4px solid #005f73;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    .exemple {
+      background-color: #e6f2f1;
+      border-left: 4px solid #0a9396;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #005f73;
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌸 Introduction au CSS – Pour Débutants</h1>
+    <p>Comprendre le rôle du CSS et apprendre les bases pour styliser vos pages web.</p>
+  </header>
+
+  <section>
+    <h2>1️⃣ Qu’est-ce que le CSS ?</h2>
+    <p>
+      <strong>CSS</strong> signifie <em>Cascading Style Sheets</em>, en français <strong>Feuilles de style en cascade</strong>.
+      C’est un langage qui permet de <strong>décrire la présentation visuelle</strong> d’une page web.
+    </p>
+    <p>
+      Tandis que le <strong>HTML</strong> s’occupe du <u>contenu</u> (texte, images, structure),
+      le <strong>CSS</strong> s’occupe du <u>style</u> (couleurs, polices, marges, dispositions, etc.).
+    </p>
+
+    <div class="exemple">
+      <p><strong>Exemple :</strong></p>
+      <pre><code>&lt;h1&gt;Bienvenue sur mon site&lt;/h1&gt;</code></pre>
+      <p>➡️ Ce code HTML affiche un titre sans style particulier.</p>
+      <pre><code>h1 {
+  color: blue;
+  text-align: center;
+}</code></pre>
+      <p>Avec ce CSS, le titre devient bleu et centré.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>2️⃣ Comment lier le CSS à une page HTML ?</h2>
+    <p>Il existe trois façons principales d’ajouter du CSS dans une page HTML :</p>
+
+    <h3>✅ a) Le style en ligne (inline)</h3>
+    <p>On écrit le style directement dans une balise HTML avec l’attribut <code>style</code> :</p>
+    <pre><code>&lt;p style="color: red; font-size: 18px;"&gt;Bonjour le monde !&lt;/p&gt;</code></pre>
+    <p>➡️ Ce paragraphe sera rouge avec une taille de texte de 18 pixels.</p>
+
+    <h3>✅ b) Le style interne (dans le fichier HTML)</h3>
+    <p>On place le code CSS dans une balise <code>&lt;style&gt;</code> à l’intérieur du <code>&lt;head&gt;</code> :</p>
+    <pre><code>&lt;head&gt;
+  &lt;style&gt;
+    p {
+      color: green;
+      font-weight: bold;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+
+    <h3>✅ c) Le style externe (dans un fichier séparé)</h3>
+    <p>On crée un fichier séparé, par exemple <code>style.css</code>, et on le relie avec :</p>
+    <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+    <p>➡️ C’est la méthode la plus utilisée dans les vrais projets, car elle garde le code propre et organisé.</p>
+  </section>
+
+  <section>
+    <h2>3️⃣ Syntaxe de base du CSS</h2>
+    <p>Voici la structure d’une règle CSS :</p>
+    <pre><code>sélécteur {
+  propriété: valeur;
+}</code></pre>
+
+    <p>Exemple concret :</p>
+    <pre><code>p {
+  color: blue;
+  font-size: 16px;
+}</code></pre>
+    <ul>
+      <li><strong>Sélecteur :</strong> <code>p</code> → indique que le style s’applique à toutes les balises &lt;p&gt;.</li>
+      <li><strong>Propriété :</strong> <code>color</code> → indique ce que l’on veut modifier.</li>
+      <li><strong>Valeur :</strong> <code>blue</code> → indique la couleur appliquée.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4️⃣ Exemple complet HTML + CSS</h2>
+    <p>Voici un petit exemple d’une page HTML avec du style externe :</p>
+
+    <pre><code>&lt;!-- fichier index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;title&gt;Ma première page stylée&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Bienvenue&lt;/h1&gt;
+  &lt;p&gt;Ceci est mon premier site avec du CSS.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <pre><code>/* fichier style.css */
+body {
+  background-color: #f0f0f0;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+p {
+  color: gray;
+  font-size: 18px;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>5️⃣ En résumé</h2>
+    <ul>
+      <li>💡 Le CSS sert à **styliser** le HTML (couleurs, tailles, mise en page...)</li>
+      <li>📂 Il peut être écrit en ligne, dans la page ou dans un fichier externe</li>
+      <li>🧩 Une règle CSS a une **structure simple** : <code>sélecteur { propriété: valeur; }</code></li>
+      <li>🎨 Grâce au CSS, un site devient beau, lisible et professionnel</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 – Cours HTML & CSS par WebAcademy | Introduction au CSS</p>
+  </footer>
+
+</body>
+</html>
